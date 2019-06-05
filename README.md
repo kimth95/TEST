@@ -9,4 +9,4 @@
 ## TEST
 해당 repository는 테스트를 위해 만들어졌습니다. 
 ## 이미지 테스트
-![image.jpg](./image.jpg)
+![image.jpg](./image.jpg)<img width="300" height="300"></img>
