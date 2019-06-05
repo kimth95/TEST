@@ -1,4 +1,4 @@
-this is KTH test repository H1
-
-
+# this is KTH test repository 
+Author 김태호 (Kim TaeHo)
+## background
 
