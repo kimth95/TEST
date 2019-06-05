@@ -9,4 +9,5 @@
 ## TEST
 해당 repository는 테스트를 위해 만들어졌습니다. 
 ## 이미지 테스트
-![Alt text](kimth95/TEST/image.png)
+![image](./TEST/image.png)
+
