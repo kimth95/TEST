@@ -1,8 +1,8 @@
 #include <wiringPi.h>
 #include <stdio.h>
 
-#define FAN_IA 4
-#define FAN_IB 5
+#define FAN_IA 4     // wPi. 4(BCM. 23, Physical. 16)
+#define FAN_IB 5     // wPi. 5(BCM. 24, Physical. 18)
 
 static void Left_2_Second() {
         digitalWrite(FAN_IA, HIGH);
