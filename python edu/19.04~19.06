@@ -1,0 +1,1441 @@
+【PYTHON】
+
+
+range=반복 
+
+while(max)
+
+int=정수
+
+\n=한줄밑으로
+
+if , else 반드시 콜론(:) 
+
+%= 나머지구하는수식
+
+ // = 몫 연산기호
+
+!= 양변이 다르다
+
+.upper() = 대문자로 통합
+
+==================================
+구구단
+
+g=int(input('구구몇단?'))
+for i in range (1,10,1):
+    x=g*i
+    print(g, 'x',i,'=',x)
+
+range=반복
+
+int=정수
+
+\n=한줄밑으로
+
+if , else 반드시 콜론(:) 
+
+ex)if(x<10):
+        print(g, 'x',i,'= ',x)
+    else:
+        print(g, 'x',i,'=',x)
+
+==================================
+성적
+
+for i in range(1,6,1):
+    nm=input('이름:')
+    k=int(input('국어:'))
+    e=int(input('영어:'))
+    c=int(input('컴퓨터:'))
+    t=k+e+c
+    a=t/3
+    if a>=90:
+        g='A'
+    elif a>=80:
+        g='B'
+    elif a>=70:
+        g='C'
+    elif a>=60:
+        g='D'
+    else:
+        g='F'
+    print(nm,k,e,c,t,a,g)
+
+
+if, 중간문=elif ,마지막else
+
+==================================
+소수점 버리기
+
+
+# 학점 성적처리
+# 소수아래 세째자리에서 반올림
+
+for i in range(1,6,1):
+    nm=input('이름:')
+    k=int(input('국어:'))
+    e=int(input('영어:'))
+    c=int(input('컴퓨터:'))
+    t=k+e+c
+    a=t/3
+    a=int(a*100+0.5)/100
+    if a>=90:
+        g='A'
+    elif a>=80:
+        g='B'
+    elif a>=70:
+        g='C'
+    elif a>=60:
+        g='D'
+    else:
+        g='F'
+    
+    print(nm,k,e,c,t,a,g)
+
+
+ex) 평균에 100 곱하기  79.6666666  -> 7966.66666
+       0.5 더하기      ->7967.16666   
+           100 나누기  ->79.671666
+    소수점 제거        ->79
+
+===================================
+1의자리가 5이상일때 + 넣기
+
+for i in range(1,6,1):
+    nm=input('이름:')
+    k=int(input('국어:'))
+    e=int(input('영어:'))
+    c=int(input('컴퓨터:'))
+    t=k+e+c
+    a=t/3
+    a=int(a*100+0.5)/100
+    if a>=90:
+        g='A'
+    elif a>=80:
+        g='B'
+    elif a>=70:
+        g='C'
+    elif a>=60:
+        g='D'
+    else:
+        g='F'
+    na=int(a)%10
+    if na>=5:
+        h='+'
+    else:
+        h=' '
+    
+    print(nm,k,e,c,t,a,g,h)
+
+
+%= 나머지구하는수식
+
+==================================
+학점 F + 없애기
+
+for i in range(1,6,1):
+    nm=input('이름:')
+    k=int(input('국어:'))
+    e=int(input('영어:'))
+    c=int(input('컴퓨터:'))
+    t=k+e+c
+    a=t/3
+    a=int(a*100+0.5)/100
+    if a>=90:
+        g='A'
+    elif a>=80:
+        g='B'
+    elif a>=70:
+        g='C'
+    elif a>=60:
+        g='D'
+    else:
+        g='F'
+    na=int(a)%10
+    if na>=5:
+        h='+'
+    else:
+        h=' '
+    if a<60:
+        h=' '
+    
+    print(nm,k,e,c,t,a,g,h)
+
+==================================
+
+100 점 a+ 만들기
+
+for i in range(1,6,1):
+    nm=input('이름:')
+    k=int(input('국어:'))
+    e=int(input('영어:'))
+    c=int(input('컴퓨터:'))
+    t=k+e+c
+    a=t/3
+    a=int(a*100+0.5)/100
+    if a>=90:
+        g='A'
+    elif a>=80:
+        g='B'
+    elif a>=70:
+        g='C'
+    elif a>=60:
+        g='D'
+    else:
+        g='F'
+    na=int(a)%10
+    if na>=5:
+        h='+'
+    else:
+        h=' '
+    if a<60:
+        h=' '
+    if a==100:
+        h='+'
+    print(nm,k,e,c,t,a,g,h)
+
+=================================
+
+간단하게 만들기
+
+g=['F','F','F','F','F','F','D','C','B','A','A']
+for i in range(1,6,1):
+    nm=input('이름:')
+    k=int(input('국어:'))
+    e=int(input('영어:'))
+    c=int(input('컴퓨터:'))
+    t=k+e+c
+    a=t/3
+    a=int(a*100+0.5)/100
+    na=int(a)%10
+    M=int(a)//10
+    h=' '
+    if (na>=5 and a>=60 or a==100):
+        h='+'
+    print(nm,k,e,c,t,a,g[M],h)
+
+
+ 
+if else 구문 -> [] 대괄호
+
+// = 몫 연산기호
+
+======================================
+#성적 0523 꺼 추가
+
+c=0
+g=['F','F','F','F','F','F','D','C','B','A','A']
+while c<5:
+    nm=input('이름:')
+    while (1):
+        ko=int(input('국어:'))
+        if ko>100: print('점수는 100점이 만점입니다.')
+        else : break    
+    while (1):
+        en=int(input('영어:'))
+        if en>100: print('점수는 100점이 만점입니다.')
+        else : break
+    while (1):
+        co=int(input('컴퓨터:'))
+        if co>100: print('점수는 100점이 만점입니다.')
+        else : break
+    c+=1
+    t=ko+en+co
+    a=t/3
+    a=int(a*100+0.5)/100
+    na=a%10
+    M=int(a)//10
+    h=' '
+    if (na>=5 and a>=60 or a==100):
+        h='+'
+    print("name=",nm,"total=",t,"average=",a,"grade=",g[M],h)
+    if c>=5: break
+print("END")
+
+=============4 / 11=================
+
+BCD 4비트
+
+표준BCD 6비트
+
+아스키코드 7비트 011/0~9 100/A-Z 110/a-z
+
+ebcdic 8비트
+
+==============패리티 체크 코드======
+
+#홀수 패리티 체크 코드 만들기
+
+b=int(input('7bit 2진코드 입력'))
+bb=b
+m=b
+c=0
+while (m>0): #m=몫 n=나머지
+    m=b//10
+    n=b%10
+    if n==1 :
+        c=c+1
+    b=m
+if c%2==0:
+    bc=bb*10+1
+else :
+    bc=bb*10
+print ( bb, "--(odd parity)-->", bc)
+
+
+while= 반복
+
+====================================
+
+#단순화1
+
+b=int(input('7bit 2진코드 입력'))
+bb=b      #카피
+c=0
+while (b>0): #m=몫 n=나머지
+    n=b%10
+    b=b//10
+    if n==1 :
+        c+=1 #c=c+1
+bc=bb*10
+if c%2==0:
+    bc=bc+1
+print ( bb, "--(odd parity)-->", bc)
+
+====================================
+
+#단순화2
+
+b=int(input('7bit 2진코드 입력'))
+bb=b      #카피
+c=0
+while (b>0): #m=몫 n=나머지
+    n=b%10
+    b=b//10
+    c=c+n
+    
+bc=bb*10
+if c%2==0:
+    bc=bc+1
+print ( bb, "--(odd parity)-->", bc)
+
+====================================
+
+#단순화3 (셀프)
+
+b=input('7bit 2진코드 입력 = ')
+c=0
+for i in range(0,7,1):    #ex) 1101100
+    c=c+int(b[i])
+bc=int(b)*10
+if c%2==0:           #c=4 bc=11011000
+    bc=bc+1         # 짝수면 +1 해야함
+print ( b , "홀수패리티>>" , bc )    
+
+========패리티 체크코드 오류검사=====
+
+# 패리티 체크 코드 정상 여부 판별
+b=int(input("parity 포함 8bit 2진코드 입력 : "))
+bb=b
+c=0
+while (b>0):
+    n=b%10
+    b=b//10
+    c=c+n
+if c%2==0:
+    print ( bb, "홀수 패리티 결과 오류" )
+else :
+    print ( bb, "홀수 패리티 결과 정상" )
+
+============배열 이용 단순화1=========
+
+#배열 이용 문자열 1차원
+b=input("8bit parity 포함 2진코드 입력")
+c=0
+for i in range(0,8,1):
+    if b[i]=='1': # 문자열 
+        c=c+1
+if c%2==0:
+    print ( b, "홀수 패리티 검사 결과 오류")
+else:
+    print ( b, "홀수 패리티 검사 결과 정상")
+
+=============배열 이용 단순화2=========
+
+#배열 이용 문자열 1차원
+b=input("8bit parity 포함 2진코드 입력 : ")
+c=0
+for i in range(0,8,1):
+    c=c+int(b[i])
+    
+if c%2==0:
+    print ( b, "홀수 패리티 검사 결과 오류")
+else:
+    print ( b, "홀수 패리티 검사 결과 정상")
+
+    
+===============평문 암호화=============
+
+# 평문을 암호화
+
+A=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+B=['B','A','D','C','F','E','H','G','J','I','L','K','N','M','P','O','R','Q','T','S','V','U','X','W','Z','Y']
+C=input("원문 : ")
+L=len(C) # len() 길이
+print("암호 : ",end='')    #end='' 아직끝나지않음
+for i in range(0,L,1):
+    for j in range(0,26):
+        if C[i]==A[j]:
+            break     #break 빠져나와라
+    print(B[j],end='')    
+
+===============평문 암호화 단순화=======
+
+# 평문을 암호화
+
+A="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+B="BADCFEHGJILKNMPORQTSVUXWZY"
+C=input("원문 : ")
+L=len(C) # len() 길이
+print("암호 : ",end='')    #end='' 아직끝나지않음
+for i in range(0,L,1):
+    for j in range(0,26):
+        if C[i]==A[j]:
+            break     #break 빠져나와라
+    print(B[j],end='')   
+
+================자동 암호화1=============
+
+# 평문을 암호화
+A=''
+B="BADCFEHGJILKNMPORQTSVUXWZYqwertyuiop[]asdfghjkl;'zxcvbnm,./`1234567890-=!@#$%^&*()_+"
+C=input("원문 : ")
+L=len(C) # len() 길이
+for i in range(0,26):
+    A=A+chr(65+i)
+for i in range(0,26):
+    A=A+chr(97+i)
+for i in range(0,10):
+    A=A+chr(48+i)
+A=A+"!@$%&^*()"    
+print("암호 : ",end='')    #end='' 아직끝나지않음
+for i in range(0,L,1):
+    for j in range(0,100):
+        if C[i]==A[j]:
+            break     #break 빠져나와라
+    if j<99 :
+        print(B[j],end='')
+    else :    
+        print(C[i],end='')   
+
+chr = 아스키
+
+=================자동 암호화2=============
+
+
+# 평문을 암호화 ,순서 자동 생성 , key 자동 생성
+A=''
+C=input("원문 : ")
+L=len(C) # len() 길이
+for i in range(0,26):
+    A=A+chr(65+i)
+for i in range(0,26):
+    A=A+chr(97+i)
+for i in range(0,10):
+    A=A+chr(48+i)
+A=A+"%^&&#*@(!)? "    
+print("암호 : ",end='')    #end='' 아직끝나지않음
+for i in range(0,L,1):
+    for j in range(0,75):
+        if C[i]==A[j]:
+            break     #break 빠져나와라
+    if j<74 :
+        print(chr(ord(A[j])+1),end='')
+    else :    
+        print(C[i],end='')   
+
+
+------------------0418-----------------------
+
+●입력 오류 체크●
+
+새로 배운것 if not ~ continue
+
+
+cnt=0
+while(cnt<5):
+    no=int(input("번호:"))
+    kor = int(input("국어:"))
+    if not(100>=kor and kor>=0):
+        print("국어 점수 입력 오류... 입력하시오.")
+        continue
+    eng = int(input("영어:"))
+    if not(100>=eng and eng>=0):
+        print("영어 점수 입력 오류... 입력하시오.")
+        continue
+    com = int(input("컴퓨터:"))
+    if not(100>=com and com>=0):
+        print("컴퓨터 점수 입력 오류... 입력하시오.")
+        continue
+    cnt=cnt+1
+    tot = kor+eng+com
+    avg = int(tot/3*100+0.5)/100
+    if (avg>=90):
+        hak='A'
+    elif(avg>=80):
+        hak='B'
+    elif(avg>=70):
+        hak='C'
+    elif(avg>=60):
+        hak='D'
+    else:
+        hak='F'
+    if int(avg)%10>=5 and avg>=60 or avg==100:
+        h2="+"
+    elif(avg<60):
+        h2=" "
+    else:
+        h2="0"
+    print("번호:",no,"총점:",tot,"평균:",avg,"학점:",hak,h2)
+
+
+==================END DATA=====================
+
+# 성적처리 소수 세번째 자리에서 반올림
+# 점수 입력 오류문구 출력
+# 학점 출력
+# A+ B0 F 해결
+# end data (True)
+
+while(True):
+    no=int(input("번호:"))
+    if no==999:
+        break
+    kor = int(input("국어:"))
+    if not(100>=kor and kor>=0):
+        print("국어 점수 입력 오류... 입력하시오.")
+        continue
+    eng = int(input("영어:"))
+    if not(100>=eng and eng>=0):
+        print("영어 점수 입력 오류... 입력하시오.")
+        continue
+    com = int(input("컴퓨터:"))
+    if not(100>=com and com>=0):
+        print("컴퓨터 점수 입력 오류... 입력하시오.")
+        continue
+
+    tot = kor+eng+com
+    avg = int(tot/3*100+0.5)/100
+    if (avg>=90):
+        hak='A'
+    elif(avg>=80):
+        hak='B'
+    elif(avg>=70):
+        hak='C'
+    elif(avg>=60):
+        hak='D'
+    else:
+        hak='F'
+    if int(avg)%10>=5 and avg>=60 or avg==100:
+        h2="+"
+    elif(avg<60):
+        h2=" "
+    else:
+        h2="0"
+    print("번호:",no,"총점:",tot,"평균:",avg,"학점:",hak,h2)
+print("<<종료>>")    
+
+====================번호 자리수 제한=============
+내것
+
+# 성적처리 소수 세번째 자리에서 반올림
+# 점수 입력 오류문구 출력
+# 학점 출력
+# A+ B0 F 해결
+# end data
+# 번호 자리수 제한
+
+while(True):
+    no=int(input("번호:"))
+    if no==999:
+        break
+    if not(no<100000 and no>=10000):
+        print("번호 입력 오류...  번호는 5자리 입니다.")
+        continue
+    kor = int(input("국어:"))
+    if not(100>=kor and kor>=0):
+        print("국어 점수 입력 오류... 0~100 사이로 입력해주세요.")
+        continue
+    eng = int(input("영어:"))
+    if not(100>=eng and eng>=0):
+        print("영어 점수 입력 오류... 0~100 사이로 입력해주세요.")
+        continue
+    com = int(input("컴퓨터:"))
+    if not(100>=com and com>=0):
+        print("컴퓨터 점수 입력 오류... 0~100 사이로 입력해주세요.")
+        continue
+    tot = kor+eng+com
+    avg = int(tot/3*100+0.5)/100
+    if (avg>=90):
+        hak='A'
+    elif(avg>=80):
+        hak='B'
+    elif(avg>=70):
+        hak='C'
+    elif(avg>=60):
+        hak='D'
+    else:
+        hak='F'
+    if int(avg)%10>=5 and avg>=60 or avg==100:
+        h2="+"
+    elif(avg<60):
+        h2=" "
+    else:
+        h2="0"
+    print("번호:",no,"총점:",tot,"평균:",avg,"학점:",hak,h2)
+print("<<종료>>")    
+
+
+---------------------------------------------------
+
+# 체크 디지트 생성
+
+# 5자리 --> 6자리
+# 체크 디지트 = 낱개 숫자 합의 %10 나머지
+while True:
+    no=int(input("5자리 번호를 입력하시오."))
+    if not(no<100000 and no>=10000):
+        print("번호 입력 오류...  번호는 5자리 입니다.")
+        continue
+    break
+s=0
+m=no
+while m!=0:
+        n=m%10 #n=5
+        s+=n   #s=s+n =5
+        m=m//10 #m=1234
+        n2=s%10 #n2 = 5
+        new=no*10+n2 #new=
+print( "기존번호 = ",no, "생성번호 = ",new )
+
+----------------------------------------------------
+
+# 체크 디지트 check
+
+# 6자리 new 번호
+# 체크 디지트 = 낱개 숫자 합의 %10 나머지
+
+while True:
+    no=int(input("6자리 번호를 입력하시오."))
+    if not(no<1000000 and no>=100000):
+        print("번호 입력 오류...  번호는 6자리 입니다.")
+        continue
+    break
+s=0
+m=no//10
+check=no%10
+while m!=0:
+    n=m%10 
+    s+=n
+    m=m//10
+n2=s%10
+if check==n2:
+    print('정상')
+else:
+    print('오류')
+
+
+---------------------------------------------------
+
+# 성적처리 소수 세번째 자리에서 반올림
+# 점수 입력 오류문구 출력
+# 학점 출력
+# A+ B0 F 해결
+# end data
+# 번호 자리수 제한
+
+# 체크 디지트 check
+# 6자리 new 번호
+# 체크 디지트 = 낱개 숫자 합의 %10 나머지
+
+while(True):
+    no=int(input("6자리 번호:"))
+    if no==999:
+        break
+    if not(no<1000000 and no>=100000):
+        print("번호 입력 오류!  번호는 6자리 입니다.")
+        continue
+    s=0
+    m=no//10
+    check=no%10
+    while m!=0:
+        n=m%10 
+        s+=n
+        m=m//10
+        n2=s%10
+    if check!=n2:
+        print(' check digit 오류! 번호를 다시 확인하세요!')
+        continue
+    kor = int(input("국어:"))
+    if not(100>=kor and kor>=0):
+        print("국어 점수 입력 오류! 0~100 사이로 입력해주세요.")
+        continue
+    eng = int(input("영어:"))
+    if not(100>=eng and eng>=0):
+        print("영어 점수 입력 오류! 0~100 사이로 입력해주세요.")
+        continue
+    com = int(input("컴퓨터:"))
+    if not(100>=com and com>=0):
+        print("컴퓨터 점수 입력 오류! 0~100 사이로 입력해주세요.")
+        continue
+    tot = kor+eng+com
+    avg = int(tot/3*100+0.5)/100
+    if (avg>=90):
+        hak='A'
+    elif(avg>=80):
+        hak='B'
+    elif(avg>=70):
+        hak='C'
+    elif(avg>=60):
+        hak='D'
+    else:
+        hak='F'
+    if int(avg)%10>=5 and avg>=60 or avg==100:
+        h2="+"
+    elif(avg<60):
+        h2=" "
+    else:
+        h2="0"
+    print("번호:",no,"총점:",tot,"평균:",avg,"학점:",hak,h2)
+print("<<종료>>")    
+
+
+-----------------------체크 디지트 최종-----------------
+
+내것
+
+# 체크 디지트 최종 앞에서 3번째 자리에 생성
+
+while(True):
+    no=int(input("5자리 번호:"))
+    if no==999:
+        break
+    if not(no<100000 and no>=10000):
+        print("번호 입력 오류!  번호는 5자리 입니다.")
+        continue
+    s=0
+    m=no
+    while m!=0:
+        n=m%10  # no=12345 , n=2345
+        s+=n    # s=2345
+        m=m//10 # m=no=12345 ,1234   =5
+        n2=s%10 # n2=345
+    m=no//1000 # m=12
+    na=no%1000 # check= 345
+    m=(m*10+n2)*1000 #m=120 #여기서 체크 디지트 더하기
+    m=m+na
+
+    print( "생성된 번호 =", m )
+
+
+=========================================================
+=========================0425============================
+=========================================================
+
+
+# 123456-789123
+#x234567 892345
+#(11-t%11)%10
+#append 추가
+
+
+
+ju=[]
+jumin=input("주민번호 12자리 '-' 빼고 입력하세요")
+for i in range(0,12,1):
+    ju.append(int(jumin[i]))
+c=1
+t=0
+for i in range(0,12,1): # 체크숫자 만드는 과정
+    c+=1
+    t=t+ju[i]*c
+    if c==9:
+        c=1
+check=(11-t%11)%10
+ju.append(check)
+new=''
+for i in range(0,13,1): # 체크숫자 포함 '-'포함 재배열 과정
+    new+=chr(ju[i]+48)
+    if i==5 :
+        new+='-'
+
+print('완성된 13자리 주민 번호 = ', new)    
+
+
+------------------------------------------------------------
+
+# 주민번호 13자리 체크
+# 역으로
+
+ju=[]
+jumin=(input("주민번호 13자리 '-' 빼고 입력하세요"))
+for i in range(0,12,1):
+    ju.append(int(jumin[i]))
+
+c=1
+t=0
+for i in range(0,12,1):
+    c+=1
+    t=t+ju[i]*c
+    if c==9:
+        c=1
+check=(11-t%11)%10
+
+if ju[12]=check:
+      print( "맞는주민번호 ", check , k )
+      
+else :
+      print( "틀린주민번호 ", check , k )
+
+-------------------------------------------------------------
+
+#주민번호 - 생년월일 체크 #me
+
+ju=[]
+while True:
+    jumin=(input("주민번호 13자리 '-' 빼고 입력하세요."))
+    for i in range(0,13,1):
+        ju.append(int(jumin[i]))
+    c=1
+    t=0
+    for i in range(0,12,1):
+        c+=1
+        t=t+ju[i]*c
+        if c==9:
+            c=1
+    check=(11-t%11)%10
+
+    if ju[12]!=check :
+          print( "틀린주민번호입니다. 다시입력하세요.")
+    else:
+        break
+if   ju[6]==0 or ju[6]==9 :
+    y=1800+ju[0]*10+ju[1]
+elif ju[6]==1 or ju[6]==2 :
+    y=1900+ju[0]*10+ju[1]    
+elif ju[6]==3 or ju[6]==4 :
+    y=2000+ju[0]*10+ju[1]
+m=ju[2]*10+ju[3]
+d=ju[4]*10+ju[5]
+                      #만나이 = 생일 안지나면 -2, 그냥 -1
+age=20190425-(y*10000+m*100+d)  #19950602
+
+man=age//10000
+
+print("당신의 생년월일은 ", y,'년',m,'월',d,'일' , " 입니다.")
+print("당신의 만 나이는 ",man , " 입니다.")
+
+---------------------------------------------------------------
+
+#주민번호 - 생년월일 체크 #me
+
+import time
+ju=[]
+while True:
+    jumin=(input("주민번호 13자리 '-' 빼고 입력하세요."))
+    for i in range(0,13,1):
+        ju.append(int(jumin[i]))
+    c=1
+    t=0
+    for i in range(0,12,1):
+        c+=1
+        t=t+ju[i]*c
+        if c==9:
+            c=1
+    check=(11-t%11)%10
+
+    if ju[12]!=check :
+          print( "틀린주민번호입니다. 다시입력하세요.")
+    else:
+        break
+if   ju[6]==0 or ju[6]==9 :
+    y=1800+ju[0]*10+ju[1]
+elif ju[6]==1 or ju[6]==2 :
+    y=1900+ju[0]*10+ju[1]    
+elif ju[6]==3 or ju[6]==4 :
+    y=2000+ju[0]*10+ju[1]
+m=ju[2]*10+ju[3]
+d=ju[4]*10+ju[5]
+tt=time.localtime()
+age=(((tt.tm_year)*10000+(tt.tm_mon)*100+(tt.tm_mday))-(y*10000+m*100+d))//10000
+print("당신의 생년월일은 ", y,'년',m,'월',d,'일' , " 입니다.")
+if ju[6]%2==1 :
+    sex='남성'
+else :
+    sex='여성'   
+print("당신은 만",age,sex, "입니다.", )
+ 
+
+
+--------------------------------------------------------------
+
+솔루션
+
+import time
+ju=[]
+while True:
+    jumin=(input("주민번호 13자리 '-' 빼고 입력하세요."))
+    for i in range(0,13,1):
+        ju.append(int(jumin[i]))
+    c=1
+    t=0
+    for i in range(0,12,1):
+        c+=1
+        t=t+ju[i]*c
+        if c==9:
+            c=1
+    check=(11-t%11)%10
+
+    if ju[12]!=check :
+          print( "틀린주민번호입니다. 다시입력하세요.")
+    else:
+        break
+if   ju[6]==0 or ju[6]==9 :
+    y=1800+ju[0]*10+ju[1]
+elif ju[6]==1 or ju[6]==2 :
+    y=1900+ju[0]*10+ju[1]    
+elif ju[6]==3 or ju[6]==4 :
+    y=2000+ju[0]*10+ju[1]
+m=ju[2]*10+ju[3]
+d=ju[4]*10+ju[5]
+print("당신의 생년은",y ,"년 입니다.")
+print("당신의 생월은",m ,"월 입니다.")
+print("당신의 생일은",d ,"일 입니다.")
+tt=time.localtime()
+age=tt.tm_year-y
+if m>tt.tm_mon or m==tt.tm_mon and d>tt.tm_mday :
+    age-=1
+if ju[6]%2==1 :
+    sex='남성'
+else :
+    sex='여성'   
+print("당신은 만",age,sex,"입니다.")   
+
+   
+================================================================
+================================0502============================
+
+for a in range (2,10):
+    print("==========",a,"단==========")
+    for i in range (1,10):
+        x=a*i
+        if (10>x):
+            print("     ",a,"    X    ",i,"   =    ",x)
+        else:
+            print("     ",a,"    X    ",i,"   =   ",x)
+    print("========================")
+
+
+==========================================================
+# 3중 반복문
+# 3X3 배열 구구단 만들기
+for a in range(1,10,3):
+    for i in range(1,4,1):
+        print('==========   ',end='')
+    print()    
+    for i in range(a,a+3,1):
+        print(' ',i,'   단    ',end='')
+    print()
+    for i in range(1,4,1):
+        print('==========   ',end='')        
+    print()        
+    for j in range(1,10):
+        for i in range(a,a+3):
+            x=i*j
+            if x<10:
+                print(i,'x',j,'= ',x,'  ',end='')
+            else :
+                print(i,'x',j,'=',x,'  ',end='')
+        print()
+    for a in range(1,4):
+        print("==========   ",end='')
+    print()
+    print('\n')
+
+
+
+================================================================
+=================================0509===========================
+
+# linear search algorithm (선형검색)
+
+N=['KBS','MBC','SBS','EBS','JTBC','BBS','NHK','ABC','CNN','BBC']
+T=['119','114','112','113','116','115','118','129','911','120']
+while (1):
+    S=input('\n(끝내려면 exit를 입력하세요)\n 원하는 방송국을 입력하세요 = ')
+    if S=='exit' : break
+    max=10
+    i=0
+    sw=0
+    
+    while i<10:
+        if S.upper()==N[i] :
+            print(S,'전화번호','=',T[i])
+            sw=1
+            break
+        i+=1
+    if sw==1:
+        print(S, '전화번호를' ,i+1 , '번 만에 찾음.' )
+        print('통화를 원하시면 통화 버튼을 눌러주세요.')
+    else:
+        print(S, '의 전화번호를' ,i ,'번 만에 못찾음.')
+    yn=input('계속 하시겠습니까? (Y/N) ')
+    if yn.upper()!='Y':break
+print('종료합니다')    
+
+---------------------------------------------------------------
+#ascending -- selection sort (선택 순서정렬)
+
+A=[7,5,3,1,2,9,6]
+print("source data : ", end='')
+for i in range(0,7,1):
+    print(A[i],' ',end='')
+print()    
+for i in range (0,6,1):
+    for j in range (i+1,7,1):
+        if A[i]>A[j]:
+            p=A[i]
+            A[i]=A[j]
+            A[j]=p
+    print('step ',i+1,'= ',end='')
+    for i in range(0,7,1):
+        print(A[i],' ',end='')
+    print()
+print()
+print('sorted data : ', end='')
+for i in range(0,7,1):
+    print(A[i],' ',end='')
+
+--------------------------------------------------------------
+
+# bubble 버블정렬
+
+a=[1,7,3,5,4,7,6]
+
+for i in range(0,6):
+    sw=1
+    for j in range(0,6-i):
+        if a[j]>a[j+1]:
+            p=a[j]
+            a[j]=a[j+1]
+            a[j+1]=p
+            sw=0
+    if sw==1 : break
+    print('step ',i+1,': ', end='')
+    for i in range(0,7,1):	
+        print(a[i],' ',end='')
+    print()    
+
+--------------------------------------------------------------
+
+# 정렬 마지막
+
+N=['KBS','MBC','SBS','EBS','JTBC','BBS','NHK','ABC','CNN','BBC']
+T=['119','114','112','113','116','115','118','129','911','120']
+for i in range(0,10-1,1):
+    sw=1
+    for j in range(0,9-i,1):
+        if N[j]>N[j+1]:
+                p=N[j]
+                N[j]=N[j+1]
+                N[j+1]=p
+                p=T[j]
+                T[j]=T[j+1]
+                T[j+1]=p
+                sw=0
+    if sw==1 : break    
+
+while (1):
+    S=input('\n(끝내려면 exit를 입력하세요)\n 원하는 방송국을 입력하세요 = ')
+    if S=='exit' : break
+    i=0
+    sw=0
+    while i<10:
+        if S.upper()==N[i] :
+            print('┌──────────────────────────────┐\n│',S,'의 전화번호는',T[i],'입니다  ◎')
+            print('└──────────────────────────────┘')
+            sw=1
+            break
+        elif S.upper()<N[i]:
+            break
+        i+=1
+    if sw==1:
+        print(S, '전화번호를' ,i+1 , '번 만에 찾음.' )
+        print('통화를 원하시면 통화 버튼을 눌러주세요.')
+    else:
+        print(S, '의 전화번호를' ,i+1,'번 만에 못찾음.')
+    yn=input('계속 하시겠습니까? (Y/N) ')
+    if yn.upper()!='Y':break
+print('종료합니다')    
+
+=================================================================================
+=========================0516====================================================
+
+#binary search. buble sort
+A=['Q','W','E','R','T','Y','U','I','O','P']
+for i in range(0,10):
+    sw=1
+    for j in range(0,9-i):
+        if A[j]>A[j+1]:
+            p=A[j]
+            A[j]=A[j+1]
+            A[j+1]=p
+            sw=0
+    if sw==1 : break
+sd=(input('찾을 data'))
+s=0
+e=9
+c=0
+sw=0
+while (s<=e):
+    m=int((s+e)/2)
+    c+=1
+    if sd==A[m]:
+        sw=1
+        break
+    if A[m]<sd :
+        s=m+1
+    else:
+        e=m-1
+if sw==1 :
+    print(c, '번만에찾음')
+else :
+    print(c, '번만에못찾음')
+
+
+======================================================================
+# 1-100 숫자 맞추기
+import random
+while True:
+    com=random.randint(1,100)
+    c=0
+    while True:
+        na=int(input( '1-100 사이숫자중 뭐게? = ' ))
+        if na==999 :
+            break
+        c+=1
+        if com==na :
+           print(c, '만에 맞췄다!')
+           break
+        if com>na :
+           print('up!')
+        else :
+           print('down!')
+        print('(포기하려면 999입력)')   
+    yn=input('또할거야? [Y/N]')
+    if(yn=='N'or yn=='n'):break
+print( ' byebye ' )               
+
+=======================================================================
+import random
+
+while (1):
+    a=input('가위(1),바위(2),보(3)중 하나를 고르시오 \n = ')
+    if(a=='가위'or'1'):
+        a=1
+    elif(a=='바위'or'2'):
+        a=2
+    elif(a=='보'or'3'):
+        a=3    
+    com=random.randint(1,3)    
+    if com==a:
+        print('컴퓨터 =', com,'사용자 =', a, '무승부')
+    elif com==1 and a==3: 
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    elif com==2 and a==1:
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    elif com==3 and a==2:
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    else:
+        print('컴퓨터 =', com,'사용자 =', a,'사용자 승리!')
+
+=======================================================================
+#가위바위보
+import random
+while True:
+    a=int(input('가위(1),바위(2),보(3)중 하나를 고르시오 \n = '))
+    if(a==1):
+        a="가위"
+    elif(a==2):
+        a="바위"
+    elif(a==3):
+        a="보" 
+    com=random.randint(1,3)
+    if com==1:
+        com="가위"
+    elif com==2:
+        com="바위"
+    elif com==3:
+        com="보"
+    if com==a:
+        print('컴퓨터 =', com,'사용자 =', a, '무승부')
+    elif com==1 and a==3:
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    elif com==2 and a==1:
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    elif com==3 and a==2:
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    else :
+        print('컴퓨터 =', com,'사용자 =', a,'사용자 승리!')
+
+=======================================================================
+#가위바위보 승률& 압축
+import random
+c=0
+wc=0
+while (1):
+    com=random.randint(1,3)
+    a=int(input('가위(1),바위(2),보(3)중 하나를 고르시오 \n = '))
+    c+=1
+    if a==1:a="가위"
+    elif a==2:a="바위"
+    elif a==3:a="보" 
+    if com==1:com="가위"
+    elif com==2:com="바위"
+    elif com==3:com="보"
+    if com==a:print('컴퓨터 =', com,'사용자 =', a, '무승부')
+    elif com==1 and a==3:
+        c-=1
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    elif com==2 and a==1:
+        c-=1
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    elif com==3 and a==2:
+        c-=1
+        print('컴퓨터 =', com,'사용자 =', a,'컴퓨터 승리!')
+    else :
+        wc+=1
+        print('컴퓨터 =', com,'사용자 =', a,'사용자 승리!')
+    if c==0:c=1
+    print('당신의 승률은', wc/c*100,'%')
+    yn=input('계속 하시겠습니까? [Y/N]')
+    if not(yn=='Y' or yn=='y'):break
+print(' 종료 ')     
+        
+        
+
+=======================================================================
+#주사위게임
+import random
+x=0
+while True:
+    x+=1
+    cpu1=random.randint(1,6)
+    cpu2=random.randint(1,6)
+    hum1=random.randint(1,6)
+    hum2=random.randint(1,6)
+    if x==5 : #조작
+        hum2=hum1
+        x=1
+    cpu=cpu1+cpu2
+    hum=hum1+hum2
+    if cpu1==cpu2 and hum1!=hum2:
+        print('컴퓨터 1번째 주사위=',cpu1,'\n컴퓨터 2번째 주사위=',cpu2,'\n')
+        print('유저 1번째 주사위=',hum1,'\n유저 2번째 주사위=',hum2,'\n')
+        print('컴퓨터의 승리!!!')
+    elif cpu1!=cpu2 and hum1==hum2:
+        print('컴퓨터 1번째 주사위=',cpu1,'\n컴퓨터 2번째 주사위=',cpu2,'\n')
+        print('유저 1번째 주사위=',hum1,'\n유저 2번째 주사위=',hum2,'\n')
+        print('유저의 승리!!!')
+    elif cpu>hum:
+        print('컴퓨터 1번째 주사위=',cpu1,'\n컴퓨터 2번째 주사위=',cpu2,'\n')
+        print('유저 1번째 주사위=',hum1,'\n유저 2번째 주사위=',hum2,'\n')
+        print('컴퓨터의 승리!!!')
+    elif cpu<hum:
+        print('컴퓨터 1번째 주사위=',cpu1,'\n컴퓨터 2번째 주사위=',cpu2,'\n')
+        print('유저 1번째 주사위=',hum1,'\n유저 2번째 주사위=',hum2,'\n')
+        print('유저의 승리!!!')
+    else :
+        print('컴퓨터 1번째 주사위=',cpu1,'\n컴퓨터 2번째 주사위=',cpu2,'\n')
+        print('유저 1번째 주사위=',hum1,'\n유저 2번째 주사위=',hum2,'\n')
+        print('비겼다!')    
+    yn=input('retry ? [Y/N]')
+    if yn=='y' or yn=='Y' : break
+
+===========================================================
+========================0523===============================
+===========================================================
+# 0523 배열 성적 나
+c=0
+nm=[]
+ko=[]
+en=[]
+co=[]
+tt=[]
+av=[]
+gg=[]
+h=[]
+while True:
+    while True:
+        nm.append(input('name : '))
+        if len(nm[c])>6 or len(nm[c])<2:
+            print('이름이 너무 길거나 짧습니다.')
+            del nm[c]
+        else : break
+    if nm[c]=='xxx': break
+    ko.append(input('kor : '))
+    en.append(input('eng : '))
+    co.append(input('com : '))
+    c+=1
+for i in range(0,c):
+    tt.append(int(ko[i])+int(en[i])+int(co[i]))
+    av.append(tt[i]/3)
+    av[i]=int(av[i]*10+0.5)/10
+    if av[i]>=90 : gg.append('A')          
+    elif av[i]>=80 : gg.append('B')
+    elif av[i]>=70 : gg.append('C')
+    elif av[i]>=60 : gg.append('D')
+    else : gg.append('F')
+    na=int(av[i])%10
+    if (na>=5 and av[i]>=60 or av[i]==100):
+        h.append('+')
+    else : h.append(' ') 
+print('name    total   avere    grade')
+for i in range(0,c):
+    print(nm[i],'\t',tt[i],'\t',av[i],'\t   ',gg[i],h[i])
+print('end')              
+
+
+
+============================================================  
+   
+# 0523 배열 성적 sol
+# 이름 5자 초과시 제거
+c=0
+nm=[]
+ko=[]
+en=[]
+co=[]
+tt=[]
+av=[]
+gg=[]
+h=[]
+while True:
+    nm.append(input('name : '))
+    if nm[c]=='xxx': break
+    ko.append(input('kor : '))
+    en.append(input('eng : '))
+    co.append(input('com : '))
+    c+=1
+for i in range(0,c,1):
+    tt.append(int(ko[i])+int(en[i])+int(co[i]))
+    av.append(tt[i]/3)
+    av[i]=int(av[i]*10+0.5)/10
+    if av[i]>=90 : gg.append('A')          
+    elif av[i]>=80 : gg.append('B')
+    elif av[i]>=70 : gg.append('C')
+    elif av[i]>=60 : gg.append('D')
+    else : gg.append('F')
+    na=int(av[i])%10
+    if (na>=5 and av[i]>=60 or av[i]==100):
+        h.append('+')
+    elif av[i]<60 : h.append(' ')
+    else: h.append('0')
+print('===============================')
+print('name    total    avere    grade')
+print('===============================')
+for i in range(0,c,1):
+    mm=''
+    if len(nm[i])>5 :
+        for j in range(0,5,1):
+            mm+=nm[i][j]
+    else :
+        mm=nm[i]
+    print(mm,'\t',tt[i],'\t',av[i],'\t  ',gg[i],h[i])
+print('===============================')
+print('end')              
+
+=====================================================
+#●버블소트 추가하기
+# 0523 배열 성적 sol
+# 이름 5자 초과시 제거
+c=0
+nm=[]
+ko=[]
+en=[]
+co=[]
+tt=[]
+av=[]
+gg=[]
+h=[]
+while True:
+    nm.append(input('name : '))
+    if nm[c]=='xxx': break
+    ko.append(input('kor : '))
+    en.append(input('eng : '))
+    co.append(input('com : '))
+    c+=1
+for i in range(0,c,1):
+    tt.append(int(ko[i])+int(en[i])+int(co[i]))
+    av.append(tt[i]/3)
+    av[i]=int(av[i]*10+0.5)/10
+    if av[i]>=90 : gg.append('A')          
+    elif av[i]>=80 : gg.append('B')
+    elif av[i]>=70 : gg.append('C')
+    elif av[i]>=60 : gg.append('D')
+    else : gg.append('F')
+    na=int(av[i])%10
+    if (na>=5 and av[i]>=60 or av[i]==100):
+        h.append('+')
+    elif av[i]<60 : h.append(' ')
+    else: h.append('0')
+print('===============================')
+print('name    total    avere    grade')
+print('===============================')
+for i in range(0,c,1):
+    mm=''
+    if len(nm[i])>5 :
+        for j in range(0,5,1):
+            mm+=nm[i][j]
+    else :
+        mm=nm[i]
+    print(mm,'\t',tt[i],'\t',av[i],'\t  ',gg[i],h[i])
+print('===============================')
+print('↓↓↓  버블소트 (1등부터 정렬) ↓↓↓')
+print('=======================================')
+print('rank    name    total    avere    grade')
+print('=======================================')
+for i in range(0,c,1):
+    sw=1
+    for j in range(0,c-1-i,1):
+        if tt[j]<tt[j+1]:
+            p=tt[j]
+            tt[j]=tt[j+1]
+            tt[j+1]=p
+            p=nm[j]
+            nm[j]=nm[j+1]
+            nm[j+1]=p
+            p=av[j]
+            av[j]=av[j+1]
+            av[j+1]=p
+            p=gg[j]
+            gg[j]=gg[j+1]
+            gg[j+1]=p
+            p=h[j]
+            h[j]=h[j+1]
+            h[j+1]=p
+            sw=0
+    if sw==1 : break
+for i in range(0,c):
+    mm=''
+    if len(nm[i])>5 :
+        for j in range(0,5,1):
+            mm+=nm[i][j]
+    else :
+        mm=nm[i]
+    print(' ',i+1,'\t',mm,'\t',tt[i],'\t',av[i],'\t  ',gg[i],h[i])    
+print('=======================================')
+print('end')
+
+=============================================================
