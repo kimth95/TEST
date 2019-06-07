@@ -1,5 +1,21 @@
 theme: jekyll-theme-midnight
-` main:
-title: “Archive” url: /archive/
-title: “Tag” url: /tags/
-title: “Category” url: /categories/ `
+---
+layout: searchList
+title: Search
+permalink: /search/
+public: true
+---
+ <div id="home-search">
+     <script>
+         (function() {
+             var cx = '나의 구글 맞춤 검색 코드';
+             var gcse = document.createElement('script');
+             gcse.type = 'text/javascript';
+             gcse.async = true;
+             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(gcse, s);
+         })();
+     </script>
+     <gcse:search linkTarget="_parent" queryParameterName="searchString"></gcse:search>
+ </div>
