@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Apena"
+title                    : "#Apena"
 title_separator          : "-"
 name                     : "Kim TaeHo"
 description              : "An amazing website."
@@ -107,10 +107,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "KIM TAEHO"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "test page"
+  location         : "korea,seoul"
   email            :
   links:
     - label: "Email"
