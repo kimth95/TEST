@@ -1,1 +1,5 @@
 theme: jekyll-theme-midnight
+` main:
+title: “Archive” url: /archive/
+title: “Tag” url: /tags/
+title: “Category” url: /categories/ `
